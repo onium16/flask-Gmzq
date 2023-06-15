@@ -81,9 +81,6 @@ def start_repost_bot():
         while True:
             try:
                 time.sleep(2)  # Пауза в секундах между проверками состояния бота
-
-                # Дополнительные проверки и обновления состояния бота, если необходимо
-
             except KeyboardInterrupt:
                 updater.stop()
                 break
