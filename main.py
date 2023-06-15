@@ -22,4 +22,4 @@ def start_bot():
     return Response('<h1>Bot started successfully!</h1>', mimetype='text/html')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=False)
