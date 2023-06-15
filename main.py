@@ -3,9 +3,15 @@ from flask import Flask, Response
 from bot import start_repost_bot
 import threading
 
+from dotenv import load_dotenv
+
 app = Flask(__name__)
 
-BOT_TOKEN = os.environ.get('TOKEN') 
+
+load_dotenv()  # Local mode  ------------------------------------------
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+# BOT_TOKEN = os.environ.get('TOKEN') 
 
 @app.route("/")
 def hello():
