@@ -1,6 +1,6 @@
 import os
 import time
-from dotenv import load_dotenv   # Local mode ------------------------------------------
+# from dotenv import load_dotenv   # Local mode ------------------------------------------
 from telegram import Bot, Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from main_reposter import start_repost_links
@@ -8,11 +8,11 @@ from main_reposter import start_repost_links
 
 def start_repost_bot():
     # Load environment variables 
-    load_dotenv()  # Local mode  ------------------------------------------
+    # load_dotenv()  # Local mode  ------------------------------------------
 
     # Get bot token from environment variables
-    BOT_TOKEN = os.getenv("BOT_TOKEN")   # Local mode ------------------------------------------
-    # BOT_TOKEN = os.environ.get('TOKEN')  # Server mode ------------------------------------------
+    # BOT_TOKEN = os.getenv("BOT_TOKEN")   # Local mode ------------------------------------------
+    BOT_TOKEN = os.environ.get('TOKEN')  # Server mode ------------------------------------------
 
     # Create bot instance
     bot = Bot(token=BOT_TOKEN)
